@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WOW 1 DAY PAINTING Orlando — Your Appointment is Confirmed!</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Open+Sans:wght@400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #111; font-family: 'Open Sans', sans-serif; }
+        .page-wrapper { max-width: 1280px; margin: 0 auto; min-height: 100vh; background-color: #1A1A1A; color: #FFFFFF; }
+
+        /* Navigation Tabs */
+        .nav-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            background: rgba(0,0,0,0.6);
+            border-bottom: 3px solid #7DC242;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-item {
+            padding: 14px 18px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            color: #AAAAAA;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .nav-item:hover { color: #FFFFFF; background: rgba(125,194,66,0.3); }
+        .nav-item.active { color: #FFFFFF; background: #7DC242; }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            min-height: 620px;
+            background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(20, 20, 20, 0.82);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 60px 40px;
+        }
+        .hero-logo { height: 110px; object-fit: contain; margin-bottom: 30px; }
+        .hero-headline {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 58px;
+            font-weight: 900;
+            color: #7DC242;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+        }
+        .hero-subheadline {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+        }
+        .hero-divider {
+            width: 80px;
+            height: 4px;
+            background: #7DC242;
+            margin: 0 auto 30px;
+        }
+        .hero-body {
+            font-size: 20px;
+            color: #E0E0E0;
+            max-width: 800px;
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+        .hero-owner {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .hero-owner-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 3px solid #7DC242;
+            object-fit: cover;
+            background: #fff;
+        }
+        .hero-owner-info { text-align: left; }
+        .hero-owner-name {
+            font-family: 'Dancing Script', cursive;
+            font-size: 32px;
+            color: #7DC242;
+        }
+        .hero-owner-title {
+            font-size: 14px;
+            color: #CCCCCC;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        /* Section Styles */
+        .section { padding: 60px 70px; }
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .section-subtitle {
+            font-size: 18px;
+            color: #7DC242;
+            font-weight: 600;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 40px;
+        }
+
+        /* OUR VISIT */
+        .visit-row { display: flex; gap: 50px; align-items: flex-start; }
+        .visit-steps { width: 380px; display: flex; flex-direction: column; gap: 30px; }
+        .visit-step { display: flex; flex-direction: column; align-items: center; text-align: center; }
+        .step-icon { width: 70px; height: 70px; background: #7DC242; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 28px; color: #fff; margin-bottom: 12px; }
+        .step-title { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 700; color: #7DC242; margin-bottom: 6px; }
+        .step-desc { font-size: 15px; color: #CCCCCC; line-height: 1.5; }
+        .visit-video { flex: 1; }
+        .video-thumb { position: relative; width: 100%; height: 380px; border: 3px solid #444; }
+        .video-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 80px; height: 80px; background: rgba(125,194,66,0.9); border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 30px; color: #fff; padding-left: 6px; }
+
+        /* OUR REVIEWS */
+        .reviews-section { background: #141414; }
+        .rating-badge { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 30px; font-size: 22px; font-weight: 700; }
+        .stars-gold { color: #F4B400; letter-spacing: 2px; }
+        .featured-review { max-width: 900px; margin: 0 auto 40px; text-align: center; }
+        .featured-text { font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 700; font-style: italic; color: #7DC242; line-height: 1.5; margin-bottom: 12px; }
+        .featured-author { font-size: 17px; color: #CCCCCC; font-weight: 600; }
+        .reviews-grid { display: flex; gap: 0; }
+        .review-col { flex: 1; padding: 0 30px; }
+        .review-col:not(:last-child) { border-right: 1px solid #333; }
+        .review-text { font-size: 15px; line-height: 1.6; color: #E0E0E0; margin-bottom: 12px; }
+        .review-author { font-size: 13px; color: #7DC242; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* OUR CUSTOMERS */
+        .customers-quote { max-width: 1000px; margin: 0 auto 20px; text-align: center; }
+        .customers-quote-text { font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 700; font-style: italic; color: #FFFFFF; line-height: 1.4; margin-bottom: 10px; }
+        .customers-quote-author { font-size: 16px; color: #7DC242; font-weight: 700; }
+        .customers-video { display: flex; justify-content: center; margin-bottom: 20px; }
+        .customers-video .video-thumb { width: 700px; height: 380px; }
+        .stats-bar { display: flex; background: #2A2A2A; border-left: 5px solid #7DC242; }
+        .stats-inner { display: flex; flex: 1; justify-content: space-around; padding: 18px 20px; }
+        .stat-item { display: flex; flex-direction: column; align-items: center; text-align: center; }
+        .stat-value { font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 800; margin-bottom: 4px; }
+        .stat-label { font-size: 12px; color: #AAAAAA; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+        .tagline-block { background: #7DC242; color: #fff; font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 900; padding: 18px 40px; display: flex; align-items: center; justify-content: center; text-transform: uppercase; letter-spacing: 2px; }
+
+        /* OUR PROJECTS */
+        .projects-section { background: #141414; }
+        .project-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-bottom: 30px; }
+        .project-item { width: 360px; height: 200px; position: relative; border: 2px solid #333; overflow: hidden; }
+        .project-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .project-label { position: absolute; bottom: 0; left: 0; width: 100%; background: rgba(0,0,0,0.75); color: #fff; padding: 8px 10px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; text-align: center; border-top: 1px solid #7DC242; }
+        .services-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+        .tag { border: 2px solid #7DC242; color: #fff; padding: 7px 16px; border-radius: 20px; font-size: 14px; font-weight: 600; }
+        .tag.filled { background: #7DC242; color: #1A1A1A; }
+
+        /* OUR WARRANTY */
+        .warranty-section { text-align: center; }
+        .warranty-grid { display: flex; justify-content: space-around; margin-bottom: 50px; }
+        .warranty-item { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 0 20px; }
+        .badge-circle { width: 140px; height: 140px; border-radius: 50%; border: 6px solid #7DC242; background: #2A2A2A; display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
+        .badge-icon { font-size: 52px; color: #fff; }
+        .warranty-title { font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 800; text-transform: uppercase; margin-bottom: 12px; }
+        .warranty-desc { font-size: 16px; color: #CCCCCC; line-height: 1.6; }
+        .no-surprises { display: inline-block; background: #7DC242; color: #fff; font-family: 'Montserrat', sans-serif; font-size: 28px; font-weight: 900; padding: 16px 60px; text-transform: uppercase; letter-spacing: 3px; clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0 50%); }
+
+        /* WE SAY NO + FINANCING */
+        .no-section { position: relative; background-image: url('https://images.unsplash.com/photo-1511895426328-dc8714191300?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'); background-size: cover; background-position: center; }
+        .no-overlay { position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(20,20,20,0.88); }
+        .no-content { position: relative; z-index: 2; padding: 60px 70px; }
+        .no-title { font-family: 'Montserrat', sans-serif; font-size: 52px; font-weight: 900; text-align: center; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 40px; }
+        .no-banners { display: flex; flex-direction: column; gap: 16px; max-width: 1000px; margin: 0 auto 0; }
+        .no-banner { display: flex; align-items: center; background: rgba(0,0,0,0.75); border-left: 8px solid #7DC242; padding: 16px 24px; }
+        .no-word { font-family: 'Montserrat', sans-serif; font-size: 36px; font-weight: 900; color: #7DC242; min-width: 80px; margin-right: 20px; }
+        .no-banner-title { font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 800; color: #fff; min-width: 320px; text-transform: uppercase; margin-right: 20px; }
+        .no-banner-desc { font-size: 17px; color: #CCCCCC; line-height: 1.4; }
+        .financing-bar { background: #7DC242; padding: 28px 70px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+        .financing-title { font-family: 'Montserrat', sans-serif; font-size: 30px; font-weight: 800; color: #1A1A1A; text-transform: uppercase; margin-bottom: 6px; }
+        .financing-desc { font-size: 18px; color: #1A1A1A; font-weight: 600; margin-bottom: 16px; }
+        .financing-icons { display: flex; gap: 40px; }
+        .fin-icon { display: flex; flex-direction: column; align-items: center; color: #1A1A1A; }
+        .fin-icon i { font-size: 34px; margin-bottom: 8px; }
+        .fin-icon-text { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 14px; }
+
+        /* MEET YOUR OWNER */
+        .owner-section { background: #141414; }
+        .owner-row { display: flex; gap: 60px; align-items: flex-start; }
+        .owner-left { display: flex; flex-direction: column; align-items: center; width: 360px; }
+        .owner-photo-circle { width: 320px; height: 320px; border-radius: 50%; border: 6px solid #7DC242; overflow: hidden; background: #fff; margin-bottom: 20px; }
+        .owner-photo-circle img { width: 100%; height: 100%; object-fit: cover; }
+        .owner-name { font-family: 'Montserrat', sans-serif; font-size: 28px; font-weight: 800; margin-bottom: 5px; }
+        .owner-role { font-size: 16px; color: #7DC242; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
+        .owner-right { flex: 1; }
+        .owner-heading { font-family: 'Montserrat', sans-serif; font-size: 38px; font-weight: 800; margin-bottom: 20px; line-height: 1.2; }
+        .owner-body { font-size: 17px; line-height: 1.7; color: #E0E0E0; margin-bottom: 18px; }
+        .owner-quote { border-left: 5px solid #7DC242; padding-left: 20px; margin-bottom: 28px; }
+        .owner-quote-text { font-family: 'Montserrat', sans-serif; font-size: 19px; font-weight: 700; font-style: italic; color: #7DC242; line-height: 1.5; }
+        .credentials { display: flex; flex-wrap: wrap; gap: 14px; }
+        .credential { display: flex; align-items: center; background: #2A2A2A; padding: 10px 18px; border: 1px solid #444; }
+        .credential i { color: #7DC242; font-size: 18px; margin-right: 10px; }
+        .credential-text { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* THANK YOU */
+        .thankyou-section { position: relative; background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'); background-size: cover; background-position: center; }
+        .thankyou-overlay { position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(20,20,20,0.87); }
+        .thankyou-content { position: relative; z-index: 2; padding: 70px 70px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+        .thankyou-logo { height: 90px; object-fit: contain; margin-bottom: 25px; }
+        .thankyou-headline { font-family: 'Montserrat', sans-serif; font-size: 40px; font-weight: 800; margin-bottom: 30px; }
+        .thankyou-owner { display: flex; flex-direction: column; align-items: center; margin-bottom: 30px; }
+        .thankyou-owner-img { width: 110px; height: 110px; border-radius: 50%; border: 3px solid #7DC242; object-fit: cover; background: #fff; margin-bottom: 10px; }
+        .thankyou-signature { font-family: 'Dancing Script', cursive; font-size: 38px; color: #7DC242; }
+        .contact-row { display: flex; justify-content: center; gap: 30px; margin-bottom: 20px; font-size: 18px; font-weight: 600; flex-wrap: wrap; }
+        .contact-item { display: flex; align-items: center; gap: 10px; }
+        .contact-item i { color: #7DC242; font-size: 20px; }
+        .service-area { font-size: 14px; color: #CCCCCC; max-width: 900px; margin-bottom: 30px; line-height: 1.6; }
+        .service-area strong { color: #fff; }
+        .cta-btn { background: #7DC242; color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 20px; padding: 18px 55px; border-radius: 35px; text-transform: uppercase; letter-spacing: 2px; border: none; text-decoration: none; display: inline-block; }
+
+        /* Section anchors */
+        .anchor { display: block; height: 0; }
+    </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+    <!-- STICKY NAV -->
+    <nav class="nav-tabs">
+        <a href="#appt" class="nav-item active">APPT CONFIRMED</a>
+        <a href="#visit" class="nav-item">OUR VISIT</a>
+        <a href="#reviews" class="nav-item">OUR REVIEWS</a>
+        <a href="#customers" class="nav-item">OUR CUSTOMERS</a>
+        <a href="#projects" class="nav-item">OUR PROJECTS</a>
+        <a href="#warranty" class="nav-item">OUR WARRANTY</a>
+        <a href="#no" class="nav-item">WE SAY NO!</a>
+        <a href="#owner" class="nav-item">MEET YOUR OWNER</a>
+        <a href="#thankyou" class="nav-item">THANK YOU</a>
+    </nav>
+
+    <!-- 1. APPT CONFIRMED -->
+    <span id="appt" class="anchor"></span>
+    <div class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <img src="assets/logos/W1D_Logo_AllWhite.png" alt="WOW 1 DAY PAINTING" class="hero-logo">
+            <div class="hero-headline">Your Appointment is Confirmed!</div>
+            <div class="hero-subheadline">WOW 1 DAY PAINTING — Orlando, FL</div>
+            <div class="hero-divider"></div>
+            <p class="hero-body">
+                We are thrilled to have the opportunity to transform your home. Before our team arrives, we want you to get to know us a little better — our process, our reviews, our projects, and the people behind the Emerald Shirts. Scroll down or use the menu above to explore.
+            </p>
+            <div class="hero-owner">
+                <img src="assets/photos/Michael_Baitelli_Headshot.png" alt="Michael Baitelli" class="hero-owner-img">
+                <div class="hero-owner-info">
+                    <div class="hero-owner-name">Michael Baitelli</div>
+                    <div class="hero-owner-title">Owner, WOW 1 DAY PAINTING Orlando</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. OUR VISIT -->
+    <span id="visit" class="anchor"></span>
+    <div class="section">
+        <div class="section-title">What to expect from our visit.</div>
+        <div class="section-subtitle">A seamless experience from consultation to completion</div>
+        <div class="visit-row">
+            <div class="visit-steps">
+                <div class="visit-step">
+                    <div class="step-icon"><i class="fas fa-comments"></i></div>
+                    <div class="step-title">FREE CONSULTATION</div>
+                    <div class="step-desc">We visit your home, assess the scope, and listen carefully to your vision and goals.</div>
+                </div>
+                <div class="visit-step">
+                    <div class="step-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <div class="step-title">UPFRONT WRITTEN QUOTE</div>
+                    <div class="step-desc">You receive a detailed written quote with no hidden fees before any work begins.</div>
+                </div>
+                <div class="visit-step">
+                    <div class="step-icon"><i class="fas fa-paint-roller"></i></div>
+                    <div class="step-title">WOW IN 1 DAY</div>
+                    <div class="step-desc">Our large, expert crew arrives early, preps everything, and transforms your space — usually in just one day.</div>
+                </div>
+            </div>
+            <div class="visit-video">
+                <div class="video-thumb">
+                    <img src="assets/photos/WOW_001_Team_Van_thumbnail.png" alt="WOW Team and Van">
+                    <div class="play-btn"><i class="fas fa-play"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. OUR REVIEWS -->
+    <span id="reviews" class="anchor"></span>
+    <div class="section reviews-section">
+        <div class="section-title">What Orlando homeowners are saying.</div>
+        <div class="rating-badge">
+            <i class="fab fa-google" style="color:#4285F4; font-size:28px;"></i>
+            <span class="stars-gold"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+            <span style="font-size:22px; font-weight:700;">4.8+ Google Rating</span>
+        </div>
+        <div class="featured-review">
+            <div class="featured-text">"They were fast, the work is excellent, and they cleaned up at the end of the day. Choose them. You won't regret it."</div>
+            <div class="featured-author">— Mary C., Orlando, FL</div>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-col">
+                <div class="stars-gold" style="font-size:15px; margin-bottom:12px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="review-text">"If you're not getting your interior or exterior home painting done by this incredible team, you're missing out!! Michel and his team arrived promptly, were incredibly efficient and 'Wow' our place looks amazing!!"</div>
+                <div class="review-author">— M.M., Orlando</div>
+            </div>
+            <div class="review-col">
+                <div class="stars-gold" style="font-size:15px; margin-bottom:12px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="review-text">"The response and quality of work was fabulous. Michael and crew were very thorough and detail oriented. Delivered above and beyond expectations."</div>
+                <div class="review-author">— Joyce W., Orlando</div>
+            </div>
+            <div class="review-col">
+                <div class="stars-gold" style="font-size:15px; margin-bottom:12px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="review-text">"The professionalism of the crew and the excellent job they did in a short amount of time was outstanding. Highly recommend them for any painting needs."</div>
+                <div class="review-author">— Vinicius F., Orlando</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. OUR CUSTOMERS -->
+    <span id="customers" class="anchor"></span>
+    <div class="section">
+        <div class="section-title">We WOW every customer, every time.</div>
+        <div class="customers-quote">
+            <div class="customers-quote-text">"I would like to specially thank the owner for taking this painting job on the 4th of July holiday. They have an amazing crew, very professional and did a great job."</div>
+            <div class="customers-quote-author">— Leah C., Orlando, FL &nbsp;<span class="stars-gold"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></div>
+        </div>
+        <div class="customers-video">
+            <div class="video-thumb" style="width:700px; height:380px;">
+                <img src="assets/photos/WOW_002_Happy_Couple_Team_thumbnail.png" alt="Happy Couple with WOW Team">
+                <div class="play-btn"><i class="fas fa-play"></i></div>
+            </div>
+        </div>
+        <div class="stats-bar">
+            <div class="stats-inner">
+                <div class="stat-item">
+                    <div class="stat-value">4.8+ <i class="fab fa-google" style="color:#4285F4; font-size:20px;"></i></div>
+                    <div class="stat-label">Google Rating</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">5.0 <i class="fas fa-star" style="color:#F4B400; font-size:20px;"></i></div>
+                    <div class="stat-label">Angi &amp; Yelp Rating</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">2019</div>
+                    <div class="stat-label">Serving Orlando Since</div>
+                </div>
+            </div>
+            <div class="tagline-block">SPEED + QUALITY = WOW&trade;</div>
+        </div>
+    </div>
+
+    <!-- 5. OUR PROJECTS -->
+    <span id="projects" class="anchor"></span>
+    <div class="section projects-section">
+        <div class="section-title">Our Work Speaks for Itself.</div>
+        <div class="section-subtitle">Interior &amp; Exterior Transformations Across Metro Orlando</div>
+        <div class="project-grid">
+            <div class="project-item">
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Interior Living Room">
+                <div class="project-label">Interior Living Room</div>
+            </div>
+            <div class="project-item">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Exterior Home Repaint">
+                <div class="project-label">Exterior Home Repaint</div>
+            </div>
+            <div class="project-item">
+                <img src="https://images.unsplash.com/photo-1556910103-1c02745a872f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kitchen Cabinet Painting">
+                <div class="project-label">Kitchen Cabinet Painting</div>
+            </div>
+            <div class="project-item">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Commercial Space Interior">
+                <div class="project-label">Commercial Space Interior</div>
+            </div>
+            <div class="project-item">
+                <img src="https://images.unsplash.com/photo-1605276374104-a628b0ce6970?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Exterior Brick Painting">
+                <div class="project-label">Exterior Brick Painting</div>
+            </div>
+            <div class="project-item">
+                <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bedroom Accent Wall">
+                <div class="project-label">Bedroom Accent Wall</div>
+            </div>
+        </div>
+        <div class="services-tags">
+            <span class="tag filled">Interior Painting</span>
+            <span class="tag filled">Exterior Painting</span>
+            <span class="tag filled">Cabinet Painting</span>
+            <span class="tag">Commercial</span>
+            <span class="tag">Drywall Repair</span>
+            <span class="tag">Popcorn Ceiling Removal</span>
+            <span class="tag">Wallpaper Removal</span>
+        </div>
+    </div>
+
+    <!-- 6. OUR WARRANTY -->
+    <span id="warranty" class="anchor"></span>
+    <div class="section warranty-section">
+        <div class="section-title">The WOW Guarantee</div>
+        <div class="section-subtitle">Peace of mind for years to come.</div>
+        <div class="warranty-grid">
+            <div class="warranty-item">
+                <div class="badge-circle"><i class="fas fa-shield-alt badge-icon"></i></div>
+                <div class="warranty-title">2-Year Warranty</div>
+                <div class="warranty-desc">Standard on all residential interior and exterior painting projects. We stand behind every stroke.</div>
+            </div>
+            <div class="warranty-item">
+                <div class="badge-circle"><i class="fas fa-paint-brush badge-icon"></i></div>
+                <div class="warranty-title">Premium Paints</div>
+                <div class="warranty-desc">We use only top-tier Sherwin-Williams and Benjamin Moore products for a lasting, beautiful finish.</div>
+            </div>
+            <div class="warranty-item">
+                <div class="badge-circle"><i class="fas fa-check-circle badge-icon"></i></div>
+                <div class="warranty-title">Satisfaction Guaranteed</div>
+                <div class="warranty-desc">We don't leave until you do a final walkthrough and are 100% satisfied with the results.</div>
+            </div>
+        </div>
+        <div style="text-align:center;">
+            <div class="no-surprises">NO SURPRISES!</div>
+        </div>
+    </div>
+
+    <!-- 7. WE SAY NO + FINANCING -->
+    <span id="no" class="anchor"></span>
+    <div class="no-section">
+        <div class="no-overlay"></div>
+        <div class="no-content">
+            <div class="no-title">We Tell Our Customers NO!</div>
+            <div class="no-banners">
+                <div class="no-banner">
+                    <div class="no-word">NO</div>
+                    <div class="no-banner-title">HIDDEN FEES!</div>
+                    <div class="no-banner-desc">The price we quote is the exact price you pay. Transparent, upfront pricing before any work begins.</div>
+                </div>
+                <div class="no-banner">
+                    <div class="no-word">NO</div>
+                    <div class="no-banner-title">MESS LEFT BEHIND!</div>
+                    <div class="no-banner-desc">We treat your home with respect. Our crews clean up completely at the end of every day.</div>
+                </div>
+                <div class="no-banner">
+                    <div class="no-word">NO</div>
+                    <div class="no-banner-title">WEEKS OF DISRUPTION!</div>
+                    <div class="no-banner-desc">With our large, expert crews, we complete most painting projects in just 1 day without sacrificing quality.</div>
+                </div>
+            </div>
+        </div>
+        <div class="financing-bar">
+            <div class="financing-title">Financing Options Available</div>
+            <div class="financing-desc">Flexible plans to make your dream home a reality today — quick approval, competitive rates.</div>
+            <div class="financing-icons">
+                <div class="fin-icon"><i class="fas fa-money-bill-wave"></i><div class="fin-icon-text">LOW MONTHLY PAYMENTS</div></div>
+                <div class="fin-icon"><i class="fas fa-percentage"></i><div class="fin-icon-text">COMPETITIVE RATES</div></div>
+                <div class="fin-icon"><i class="fas fa-check-circle"></i><div class="fin-icon-text">QUICK APPROVAL</div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 8. MEET YOUR OWNER -->
+    <span id="owner" class="anchor"></span>
+    <div class="section owner-section">
+        <div class="owner-row">
+            <div class="owner-left">
+                <div class="owner-photo-circle">
+                    <img src="assets/photos/Michael_Baitelli_Headshot.png" alt="Michael Baitelli">
+                </div>
+                <div class="owner-name">Michael Baitelli</div>
+                <div class="owner-role">Local Franchise Owner</div>
+            </div>
+            <div class="owner-right">
+                <div class="owner-heading">Meet Michael Baitelli — Your Local WOW Owner</div>
+                <p class="owner-body">Michael Baitelli is not your typical painting company owner. A seasoned business executive with nearly 20 years of experience and a Harvard Business School graduate, Michael made a bold decision in 2019: he moved his family from Rio de Janeiro, Brazil, to Orlando, Florida, to build something of his own.</p>
+                <p class="owner-body">Today, Michael leads one of Orlando's top-rated painting teams, personally committed to WOW-ing every single customer. He brings his extensive corporate background to ensure the business runs with ultimate professionalism, efficiency, and customer focus.</p>
+                <div class="owner-quote">
+                    <div class="owner-quote-text">"What I love most is the opportunity to transform homes and spaces while building connections with the community. Knowing we've made their world a little brighter, one room at a time."</div>
+                </div>
+                <div class="credentials">
+                    <div class="credential"><i class="fas fa-university"></i><div class="credential-text">Harvard Business School</div></div>
+                    <div class="credential"><i class="fas fa-briefcase"></i><div class="credential-text">20+ Years Executive</div></div>
+                    <div class="credential"><i class="fas fa-calendar-check"></i><div class="credential-text">Serving Orlando Since 2019</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 9. THANK YOU -->
+    <span id="thankyou" class="anchor"></span>
+    <div class="thankyou-section">
+        <div class="thankyou-overlay"></div>
+        <div class="thankyou-content">
+            <img src="assets/logos/W1D_Logo_AllWhite.png" alt="WOW 1 DAY PAINTING" class="thankyou-logo">
+            <div class="thankyou-headline">Thank you for the opportunity — we'll see you soon!</div>
+            <div class="thankyou-owner">
+                <img src="assets/photos/Michael_Baitelli_Headshot.png" alt="Michael Baitelli" class="thankyou-owner-img">
+                <div class="thankyou-signature">Michael Baitelli</div>
+            </div>
+            <div class="contact-row">
+                <div class="contact-item"><i class="fas fa-phone-alt"></i> (407) 751-1234</div>
+                <div class="contact-item"><i class="fas fa-envelope"></i> orlando@wow1day.com</div>
+                <div class="contact-item"><i class="fas fa-globe"></i> wow1day.com/orlando</div>
+            </div>
+            <div class="service-area">
+                <strong>PROUDLY SERVING:</strong> Winter Park &middot; Windermere &middot; Lake Nona &middot; Baldwin Park &middot; College Park &middot; Conway &middot; Horizon West &middot; and all of Metro Orlando
+            </div>
+            <a href="https://www.wow1day.com/locations/house-painting-orlando" class="cta-btn" target="_blank">BOOK YOUR FREE ESTIMATE</a>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // Highlight active nav tab on scroll
+    const sections = document.querySelectorAll('.anchor');
+    const navItems = document.querySelectorAll('.nav-item');
+    const ids = ['appt','visit','reviews','customers','projects','warranty','no','owner','thankyou'];
+
+    window.addEventListener('scroll', () => {
+        let current = 'appt';
+        sections.forEach((sec, i) => {
+            if (window.scrollY >= sec.offsetTop - 80) {
+                current = ids[i];
+            }
+        });
+        navItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('href') === '#' + current) {
+                item.classList.add('active');
+            }
+        });
+    });
+</script>
+</body>
+</html>
