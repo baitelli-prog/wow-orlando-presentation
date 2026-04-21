@@ -254,6 +254,125 @@
 
         /* Section anchors */
         .anchor { display: block; height: 0; }
+
+        /* ===== TABLET (max 900px) ===== */
+        @media (max-width: 900px) {
+            .section { padding: 50px 40px; }
+            .hero-headline { font-size: 42px; }
+            .hero-body { font-size: 17px; }
+            .visit-row { flex-direction: column; gap: 30px; }
+            .visit-steps { width: 100%; }
+            .video-embed { height: 300px; }
+            .video-embed-wide { width: 100%; height: 300px; }
+            .reviews-grid { flex-direction: column; gap: 24px; }
+            .review-col { border-right: none !important; border-bottom: 1px solid #333; padding: 0 0 24px 0; }
+            .review-col:last-child { border-bottom: none; }
+            .warranty-grid { flex-direction: column; align-items: center; gap: 36px; }
+            .owner-row { flex-direction: column; align-items: center; gap: 30px; }
+            .owner-left { width: 100%; }
+            .owner-photo-circle { width: 240px; height: 240px; }
+            .no-banner-title { min-width: unset; font-size: 20px; }
+            .no-banner-desc { font-size: 15px; }
+            .project-item { width: calc(50% - 8px); }
+            .financing-icons { gap: 24px; }
+        }
+
+        /* ===== MOBILE (max 600px) ===== */
+        @media (max-width: 600px) {
+            /* Nav */
+            .nav-tabs {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                justify-content: flex-start;
+                scrollbar-width: none;
+            }
+            .nav-tabs::-webkit-scrollbar { display: none; }
+            .nav-item { padding: 12px 14px; font-size: 10px; white-space: nowrap; flex-shrink: 0; }
+
+            /* Hero */
+            .hero-section { min-height: 500px; }
+            .hero-content { padding: 40px 20px; }
+            .hero-logo { height: 80px; }
+            .hero-headline { font-size: 28px; letter-spacing: 1px; }
+            .hero-subheadline { font-size: 18px; }
+            .hero-body { font-size: 15px; }
+            .hero-owner { flex-direction: column; align-items: center; text-align: center; gap: 12px; }
+            .hero-owner-info { text-align: center; }
+            .hero-owner-name { font-size: 26px; }
+
+            /* Sections */
+            .section { padding: 40px 20px; }
+            .section-title { font-size: 28px; }
+            .section-subtitle { font-size: 14px; }
+
+            /* Visit */
+            .visit-row { flex-direction: column; }
+            .visit-steps { width: 100%; }
+            .video-embed { height: 220px; }
+
+            /* Reviews */
+            .featured-text { font-size: 18px; }
+            .reviews-grid { flex-direction: column; gap: 24px; }
+            .review-col { border-right: none !important; border-bottom: 1px solid #333; padding: 0 0 20px 0; }
+            .review-col:last-child { border-bottom: none; }
+            .rating-badge { flex-wrap: wrap; gap: 8px; font-size: 17px; justify-content: center; }
+
+            /* Customers */
+            .customers-quote-text { font-size: 17px; }
+            .video-embed-wide { width: 100%; height: 220px; }
+            .stats-bar { flex-direction: column; }
+            .stats-inner { flex-wrap: wrap; gap: 16px; padding: 16px; }
+            .stat-item { flex: 1; min-width: 100px; }
+            .tagline-block { font-size: 16px; padding: 14px 20px; text-align: center; }
+
+            /* Projects */
+            .project-grid { gap: 10px; }
+            .project-item { width: 100%; height: 180px; }
+
+            /* Warranty */
+            .warranty-grid { flex-direction: column; align-items: center; gap: 30px; }
+            .warranty-item { padding: 0 10px; }
+            .badge-circle { width: 110px; height: 110px; }
+            .badge-icon { font-size: 40px; }
+            .warranty-title { font-size: 18px; }
+            .no-surprises { font-size: 18px; padding: 12px 30px; clip-path: none; border-radius: 4px; }
+
+            /* WE SAY NO */
+            .no-content { padding: 40px 20px; }
+            .no-title { font-size: 32px; }
+            .no-banner { flex-direction: column; align-items: flex-start; gap: 6px; padding: 16px 16px; }
+            .no-word { font-size: 28px; min-width: unset; margin-right: 0; }
+            .no-banner-title { min-width: unset; font-size: 18px; margin-right: 0; }
+            .no-banner-desc { font-size: 14px; }
+            .financing-bar { padding: 24px 20px; }
+            .financing-title { font-size: 22px; }
+            .financing-desc { font-size: 15px; }
+            .financing-icons { flex-direction: column; gap: 16px; align-items: center; }
+
+            /* Owner */
+            .owner-row { flex-direction: column; align-items: center; }
+            .owner-left { width: 100%; align-items: center; }
+            .owner-photo-circle { width: 200px; height: 200px; }
+            .owner-heading { font-size: 24px; text-align: center; }
+            .owner-body { font-size: 15px; }
+            .owner-quote-text { font-size: 16px; }
+            .credentials { justify-content: center; }
+
+            /* Thank You */
+            .thankyou-content { padding: 50px 20px; }
+            .thankyou-headline { font-size: 26px; }
+            .thankyou-signature { font-size: 30px; }
+            .contact-row { flex-direction: column; gap: 14px; font-size: 16px; align-items: center; }
+            .cta-btn { font-size: 16px; padding: 16px 36px; }
+        }
+
+        /* ===== VERY SMALL (max 380px - iPhone SE) ===== */
+        @media (max-width: 380px) {
+            .hero-headline { font-size: 24px; }
+            .section-title { font-size: 24px; }
+            .nav-item { padding: 10px 10px; font-size: 9px; }
+        }
     </style>
 </head>
 <body>
